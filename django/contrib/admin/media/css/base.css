@@ -2,24 +2,24 @@
     DJANGO Admin styles
 */
 
-body {
+html, body {
     margin: 0;
     padding: 0;
-    font-size: 12px;
-    font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-size: 11px;
+    font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
     color: #333;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 /* LINKS */
 
 a:link, a:visited {
-    color: #5b80b2;
+    color: #217598;
     text-decoration: none;
 }
 
 a:hover {
-    color: #036;
+    color: #D54E21;
 }
 
 a img {
@@ -27,7 +27,9 @@ a img {
 }
 
 a.section:link, a.section:visited {
-    color: white;
+    color: #464646;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
 
@@ -43,18 +45,20 @@ p {
 }
 
 h1,h2,h3,h4,h5 {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h1 {
-    font-size: 18px;
-    color: #666;
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #464646;
     padding: 0 6px 0 0;
     margin: 0 0 .2em 0;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 22px;
     margin: 1em 0 .5em 0;
 }
 
@@ -292,11 +296,11 @@ tr.row-label td {
 }
 
 tr.alt {
-    background: #f6f6f6;
+    background: #f9f9f9;
 }
 
 .row1 {
-    background: #EDF3FE;
+    background: #f9f9f9;
 }
 
 .row2 {
@@ -306,7 +310,8 @@ tr.alt {
 /* SORTABLE TABLES */
 
 thead th a:link, thead th a:visited {
-    color: #666;
+    color: #464646;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
     display: block;
 }
 
@@ -351,6 +356,10 @@ input, textarea, select, .form-row p {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-weight: normal;
     font-size: 11px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 textarea {
@@ -365,10 +374,20 @@ input[type=text], input[type=password], textarea, select, .vTextField {
 
 .button, input[type=submit], input[type=button], .submit-row input {
     background: white url(../img/admin/nav-bg.gif) bottom repeat-x;
-    padding: 3px 5px;
-    color: black;
+    padding: 2px 8px;
+    color: #464646;
+    text-shadow: 0 1px 0 #fff;
     border: 1px solid #bbb;
-    border-color: #ddd #aaa #aaa #ddd;
+    -moz-border-radius: 11px;
+    -khtml-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    color: #000;
+    border-color: #666;
 }
 
 .button:active, input[type=submit]:active, input[type=button]:active {
@@ -377,11 +396,17 @@ input[type=text], input[type=password], textarea, select, .vTextField {
 }
 
 .button.default, input[type=submit].default, .submit-row input.default {
-    border: 2px solid #5b80b2;
+    border: 1px solid #298CBA;
     background: #7CA0C7 url(../img/admin/default-bg.gif) bottom repeat-x;
     font-weight: bold;
     color: white;
+    text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
     float: right;
+    margin-left: 8px;
+}
+
+.button.default:hover, input[type=submit].default:hover {
+	border-color: #13455b;
 }
 
 .button.default:active, input[type=submit].default:active {
@@ -393,7 +418,7 @@ input[type=text], input[type=password], textarea, select, .vTextField {
 
 .module {
     border: 1px solid #ccc;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     background: white;
 }
 
@@ -417,11 +442,12 @@ input[type=text], input[type=password], textarea, select, .vTextField {
 .module h2, .module caption, .inline-group h2 {
     margin: 0;
     padding: 2px 5px 3px 5px;
-    font-size: 11px;
+    font-size: 12px;
     text-align: left;
     font-weight: bold;
-    background: #7CA0C7 url(../img/admin/default-bg.gif) top left repeat-x;
-    color: white;
+    background: #eee url(../img/admin/nav-bg.gif) bottom left repeat-x;
+    color: #464646;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .module table {
@@ -458,9 +484,12 @@ ul.messagelist li.error{
     display: block;
     padding: 4px 5px 4px 25px;
     margin: 0 0 3px 0;
-    border: 1px solid red;
-    color: red;
-    background: #ffc url(../img/admin/icon_error.gif) 5px .3em no-repeat;
+    border: 1px solid #CC0000;
+    background: #FFEBE8 url(../img/admin/icon_error.gif) 5px .3em no-repeat;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 ul.errorlist {
@@ -523,7 +552,7 @@ div.system-message p.system-message-title {
 
 div.breadcrumbs {
     background: white url(../img/admin/nav-bg-reverse.gif) 0 -10px repeat-x;
-    padding: 2px 8px 3px 8px;
+    padding: 2px 15px 3px 15px;
     font-size: 11px;
     color: #999;
     border-top: 1px solid white;
@@ -702,25 +731,27 @@ table#change-history tbody th {
 /* HEADER */
 
 #header {
-    background: #417690;
-    color: #ffc;
+    background: #464646;
+    color: #fff;
     overflow: hidden;
 }
 
 #header a:link, #header a:visited {
-    color: white;
+    color: #ccc;
 }
 
 #header a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
 #branding h1 {
-    padding: 0 10px;
-    font-size: 18px;
-    margin: 8px 0;
+    padding: 0 15px;
+    margin: 10px 0;
+    font-size: 22px;
     font-weight: normal;
-    color: #f4f379;
+    font-style: normal;
+    color: #fff;
 }
 
 #branding h2 {
@@ -736,8 +767,9 @@ table#change-history tbody th {
     top: 0;
     right: 0;
     padding: 1.2em 10px;
-    font-size: 11px;
+    font-size: 12px;
     text-align: right;
+    color: #999;
 }
 
 /* SIDEBAR */
@@ -751,9 +783,3 @@ table#change-history tbody th {
 #content-related h4 {
     font-size: 11px;
 }
-
-#content-related .module h2 {
-    background: #eee url(../img/admin/nav-bg.gif) bottom left repeat-x;
-    color: #666;
-}
-
