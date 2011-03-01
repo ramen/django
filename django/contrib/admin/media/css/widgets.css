@@ -23,7 +23,9 @@
 
 .selector .selector-available h2 {
     background: white url(../img/admin/nav-bg.gif) bottom left repeat-x;
-    color: #666;
+    color: #464646;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .selector .selector-filter {
